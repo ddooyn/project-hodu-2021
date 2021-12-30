@@ -15,31 +15,51 @@
     <header class="header">
         <nav class="header-navbar">
             <h1><span class="ir_pm">호두애용</span></h1>
-            <button>
+            <button class="btn-menu">
                 <img src="img/menu.svg" alt="메뉴 버튼">
             </button>
+            <article class="menu-mobile">
+                <div class="popup-menu">
+                    <button class="btn-back">
+                        <img src="img/arrow-left.svg" alt="뒤로가기 버튼">
+                    </button>
+                    <ul class="popup-menu-list">
+                        <li><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="javascript:void(0)">About</a></li>
+                        <li><a href="javascript:void(0)">Support</a></li>
+                    </ul>
+                    <button type="button" class="btn-download-m">Download</button>
+                </div>
+                <div class="dimed"></div>
+            </article>
         </nav>
-        <p class="wrap-txt">
+        <div class="wrap-txt">
             <strong>Lorem Ipsum is simply dummy text of the printing and</strong>
-            <em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            <em>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the
                 industry's standard dummy text ever since the 1500s, when an unknown</em>
-        </p>
-        <button type="button" class="btn-download">Download</button>
+            <button type="button" class="btn-download">Download</button>
+        </div>
     </header>
     <main class="cont-main">
         <h2 class="sr-only">호두 소개</h2>
-        <img src="img/img_4.jpg" alt="" class="main-hodu">
-        <strong>Lorem Ipsum is simply
-            dummy text of the printing and dummy text</strong>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <em>dummy text of the printing and dummy</em>
-        <p>Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
-        <!-- image slide -->
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-            Ipsum is simply dummy text of the printing and typesetting industry. </p>
-        <button type="button" class="btn-download">Learn More</button>
+        <section class="txt-main">
+            <div class="wrap-cont">
+                <img src="img/img_4.jpg" alt="" class="main-hodu">
+                <strong>Lorem Ipsum is simply
+                    dummy text of the printing and dummy text</strong>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <em>dummy text of the printing and dummy</em>
+            <p>Lorem Ipsum is simply <span>dummy text</span> of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</p>
+            <!-- image slide -->
+            <article class="slide-photo">사진 영역 </article>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown<br>
+                Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <button type="button" class="btn-subscribe">Learn More</button>
+        </section>
     </main>
     <section class="sect-subs">
         <h2 class="sr-only">호두 구독</h2>
@@ -50,7 +70,7 @@
             <form action="/" method="post"></form>
             <label for="subscribeForm" class="sr-only">블로그 포스트 구독</label>
             <input type="text" name="subscribeForm" id="subscribeForm" placeholder="Enter your e-mail address">
-            <button type="button" class="btn-download">Subscribe</button>
+            <button type="button" class="btn-subscribe">Subscribe</button>
         </article>
     </section>
     <footer>

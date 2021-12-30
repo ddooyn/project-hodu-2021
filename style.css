@@ -4,6 +4,16 @@
 body {
     font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
     word-break:break-word;
+    overflow-x: hidden;
+}
+
+strong, p {
+    line-height: 1.4em;
+}
+
+strong {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 img {
@@ -31,9 +41,8 @@ img {
 /* header */
 .header {
     position: relative;
-    height: 100vh;
+    height: 900px;
     background-color: #F2E9D8;
-    text-align: center;
 }
 
 .header::after {
@@ -45,12 +54,15 @@ img {
     width: 197px;
     height: 422px;
     transform: translateX(-50%);
+    transition: all 0.5s ease;
     background: url("img/box-cat.png") center / cover no-repeat;
 }
 
 .header-navbar {
     display: flex;
-    padding: 22px 20px;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    height: 76px;
 }
 
 .header-navbar h1 {
@@ -60,7 +72,22 @@ img {
     background: url("img/logo.png") center / cover no-repeat;
 }
 
-.btn-download {
+.btn-menu {
+    margin-top: -2px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.btn-menu img {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-download, .btn-download-m, .btn-subscribe {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+    margin-top: 30px;
     padding: 11px 24px;
     border-radius: 40px;
     background-color: #D97652;
@@ -71,33 +98,144 @@ img {
 }
 
 .wrap-txt {
+    margin: 80px auto 0;
+    width: 70vw;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.1s ease;
+}
+
+.wrap-txt strong {
+    display: block;
+    margin: 0 auto 30px;
+    /* width:  */
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.wrap-txt em {
     margin: 0 auto;
-    width: 80vw;
-    
+    display: block;
+    max-width: 490px;
+    line-height: 1.4em;
+}
+
+/* modal - mobile menu */
+.popup-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100vh;
+    padding: 120px 50px 0;
+    background: #263140;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    z-index: 100;
+}
+
+.dimed {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.on .popup-menu,
+.on .dimed {
+    display: block;
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.popup-menu-list li {
+    margin-bottom: 30px;
+}
+
+.btn-download-m {
+    margin-top: 20px;
 }
 
 /* main */
 .cont-main {
-    padding: 32px;
-    margin-bottom: 400px;
+    padding: 35px 32px 30px;
+    margin-bottom: 300px;
+    font-size: 16px;
 }
 
 .main-hodu {
+    margin: 40px auto;
     max-width: 660px;
-    height: 190px;
-    /* height: 390px; pc-size*/
+    width: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 30px;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+.txt-main {
+    margin: 0 auto;
+    max-width: 680px;
+}
+
+.cont-main strong {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cont-main strong + p {
+    font-size: 14px;
+}
+
+.cont-main em {
+    display: block;
+    margin: 60px auto 30px;
+    font-size: 24px;
+    color: #D97652;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cont-main em + p {
+    text-align: center;
+}
+
+.cont-main em + p span {
+    color: #D97652;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* slide */
+.slide-photo {
+    margin: 40px auto 60px;
+    text-align: center;
+}
+
 /* subs */
 .sect-subs {
     position: relative;
-    width: 100vw;
+    width: 100%;
     min-height: 240px;
     max-height: 340px;
-    background: url("img/img_5.jpg") center / cover no-repeat;
+    background: url("img/img_5.jpg") 50% 35% / cover no-repeat;
 }
 
 .sect-subs::after {
@@ -126,10 +264,31 @@ img {
     z-index: 20;
 }
 
+.subs h3 {
+    width: 80%;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.subs p {
+    margin: 20px auto 30px;
+    font-size: 14px;
+    color: #F2E9D8;
+}
+
 #subscribeForm {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
     display: block;
+    margin-left: auto;
+    min-width: 60%;
     border-radius: 60px;
-    padding: 12px 48px;
+    padding: 12px 30px;
+    font-size: 12px;
+}
+
+.btn-subscribe {
+    display: block;
+    margin-left: auto;
 }
 
 /* footer */
@@ -174,4 +333,107 @@ footer {
 
 .footer-navbar li:not(:last-child) {
     margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+    .header-navbar {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 26px auto;
+        max-width: 1200px;
+    }
+
+    .btn-menu {
+        display: none;
+    }
+
+    .popup-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        color: #000;
+        font-weight: 400;
+        text-align: left;
+        z-index: 0;
+    }
+
+    .btn-back {
+        display: none;
+    }
+    
+    .popup-menu-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-menu-list li {
+        margin: 0;
+        margin-right: 30px;
+    }
+    
+    .btn-download-m {
+        margin: 0;
+    }
+
+    .btn-download, .btn-download-m, .btn-subscribe {
+        width: 140px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        text-align: left;
+    }
+
+    .header::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -120px;
+        right: 0;
+        width: 415px;
+        height: 890px;
+        transform: translateX(40%);
+    }
+
+    .wrap-txt {
+        margin: 0 auto;
+        margin-top: 200px;
+        padding-left: 30px;
+        width: 1200px;
+        text-align: left;
+        font-size: 16px;
+        transition: all 0.1s ease;
+    }
+    
+    .wrap-txt strong {
+        display: block;
+        margin: 0;
+        margin-bottom: 40px;
+        max-width: 740px;
+        font-size: 48px;
+    }
+    
+    .wrap-txt em {
+        margin: 0;
+        display: block;
+        max-width: 440px;
+    }
+
+    .btn-download {
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    .cont-main {
+        padding-top: 40px;
+        transition: padding 0.5s ease;
+    }
 }
