@@ -9,3 +9,15 @@ const toggleMobileMenu = () => {
 btnPopMobileMenu.addEventListener('click', toggleMobileMenu);
 btnBack.addEventListener('click', toggleMobileMenu);
 dimed.addEventListener('click', toggleMobileMenu);
+
+const btnSubscribe = document.querySelector('.btn-subscribe');
+const btnOkHodu = document.querySelector('.btn-okhodu');
+const dimedBlack = document.querySelector('.dimed-black');
+
+const toggleThanksSubscribe = () => {
+    document.querySelector('.modal-thanks').classList.toggle('on');
+}
+
+btnSubscribe.addEventListener('click', toggleThanksSubscribe);
+btnOkHodu.addEventListener('click', toggleThanksSubscribe);
+dimedBlack.addEventListener('click', toggleThanksSubscribe);
